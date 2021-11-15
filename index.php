@@ -14,16 +14,15 @@
     <title>metier entity</title>
 </head>
 <body>
-    <?php
-    if($_SESSION['user_id']){
+<?php
+    if(isset($_SESSION['user_id'])){
         echo "<h2>bienvenue a toi  </h2>";
         echo  $_SESSION["user_email"];
         require_once "./View/Home/pageAdmin.php";
-        
-        
+
     }else{
-        echo '<a href="/userManager/Controller/login.php">login</a>
-        <a href="/userManager/Controller/register.php">sinscrire</a>';
+        echo '<a href="Controller/login.php">login</a>
+        <a href="Controller/register.php">sinscrire</a>';
     }
 
     ?>
